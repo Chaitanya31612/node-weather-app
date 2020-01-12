@@ -19,7 +19,7 @@ const forecast = (latitude, longitude, callback) => {
       let precip = body.currently.precipProbability;
       callback(
         undefined,
-        `${body.daily.data[0].summary} It is currently ${temperature} degrees Celsius out. There is a ${precip}% chances of rain.`
+        `${body.daily.data[0].summary} It is currently ${temperature} degrees Celsius out. There is a maximum temperature of ${body.daily.data[0].temperatureHigh} and minimum temperature will be ${body.daily.data[0].temperatureLow}. There is a ${precip}% chances of rain.`
       );
     }
   });
